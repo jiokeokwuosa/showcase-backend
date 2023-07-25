@@ -74,8 +74,8 @@ Okwuosa Chijioke (Okwuosachijioke@gmail.com)
 This is licensed for your use, modification and distribution under the [MIT license.](https://opensource.org/licenses/MIT)
 
 ## My Env Variables
-PORT= use your desired port
-DATABASE_URL= you can get a free Database url by signing up at https://cockroachlabs.cloud/clusters and creating a free cluster
-JWT_SECRET= use any value you want
+- PORT= use your desired port
+- DATABASE_URL= you can get a free Database url by signing up at https://cockroachlabs.cloud/clusters and creating a free cluster 
+- JWT_SECRET= use any value you want
 
 
