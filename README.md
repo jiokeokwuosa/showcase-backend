@@ -1,9 +1,9 @@
-# CJ
+# Showcase App
 A Typescript/Node JS(Express) backend server
 
 ## Features
 
-- Users can register on the server
+- Users can signup
 - Users can login
 - User can retrive profile data
 - Users can make API call with axios
@@ -53,7 +53,7 @@ The API is currently in version 1 (v1) and can be accessed locally via [http://l
 
 None
 
-## Messages to subscribe to via socket.io
+## Endpoints
 
 | Endpoint                                         | Functionality                            |
 | ------------------------------------------------ | -----------------------------------------|
