@@ -4,7 +4,7 @@ import { formatResponse } from '../utils/helpers';
 import { IAPIResponse } from '../types';
 
 /**
- *Contains Auth Controller
+ * Contains Auth Controller
  * @class AuthController
  */
 class AuthController {

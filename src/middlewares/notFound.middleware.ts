@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 
-const notFound = (req: Request, res: Response, /* next: NextFunction */) => {
+const notFound = (req: Request, res: Response /* next: NextFunction */) => {
   res.status(404).json({
     status: 'error',
-    message: 'No endpoint found'
+    message: 'No endpoint found',
   });
 };
 

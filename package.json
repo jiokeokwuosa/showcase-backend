@@ -8,22 +8,22 @@
     "dev": "nodemon --config nodemon.json src/index.ts",
     "test": "NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha --timeout 10000 -r ts-node/register './tests/**/*.ts'",
     "lint": "eslint . --ext .ts",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\" \"./tests/**/*.ts\"",
     "migration:generate": "npx prisma migrate dev --name",
     "migration": "npx prisma migrate dev",
     "schema:generate": "npx prisma generate"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jiokeokwuosa/showcase.git"
+    "url": "git+https://github.com/jiokeokwuosa/showcase-backend.git"
   },
   "keywords": [],
   "author": "Okwuosa Chijioke",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jiokeokwuosa/showcase/issues"
+    "url": "https://github.com/jiokeokwuosa/showcase-backend/issues"
   },
-  "homepage": "https://github.com/jiokeokwuosa/showcase#readme",
+  "homepage": "https://github.com/jiokeokwuosa/showcase-backend#readme",
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/chai": "^4.3.5",
