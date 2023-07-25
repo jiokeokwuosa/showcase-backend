@@ -1,9 +1,10 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 
-const notFound = (req: Request, res: Response, next: NextFunction) => {
-  const err = new Error('No endpoint found');
-  res.status(404);
-  next(err);
+const notFound = (req: Request, res: Response, /* next: NextFunction */) => {
+  res.status(404).json({
+    status: 'error',
+    message: 'No endpoint found'
+  });
 };
 
 export default notFound;

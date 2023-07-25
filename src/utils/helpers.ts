@@ -44,17 +44,6 @@ export const generateToken = (id: string, email: string) => {
   return token;
 };
 
-export const processErrors = (id: string, email: string) => {
-  const token = jwt.sign(
-    {
-      data: { id, email },
-    },
-    `${process.env.JWT_SECRET}`,
-    { expiresIn: '7d' },
-  );
-  return token;
-};
-
 export const processValidationResult = async (
   req: Request,
   res: Response,
