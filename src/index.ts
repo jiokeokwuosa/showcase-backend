@@ -17,12 +17,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // base url
-app.get('/api/v1', (req: Request, res: Response) =>
+app.get('/api/', (req: Request, res: Response) =>
   res
     .status(200)
     .json({ status: 'success', message: 'Welcome to Showcase API' }),
 );
-app.use('/api/v1', v1Router);
+app.use('/api/', v1Router);
 
 app.use(notFound);
 app.use(serverError);

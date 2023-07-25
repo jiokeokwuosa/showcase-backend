@@ -1,7 +1,7 @@
-import { ValidationChain, check, validationResult } from 'express-validator';
+import { ValidationChain, check } from 'express-validator';
 import { NextFunction, Request, Response } from 'express';
 import AuthServices from '../../services/auth.services';
-import { formatResponse } from '../../utils/helpers';
+import { formatResponse, processValidationResult } from '../../utils/helpers';
 
 /**
  *Contains Signup Validator
@@ -57,7 +57,7 @@ class SignUp {
   }
 
   /**
-   * Validate user data.
+   * Process validation result.
    * @param {Request} req - The payload.
    * @param {Response} res - The Response object.
    * @param {Response} next - The next parameter.
@@ -69,13 +69,7 @@ class SignUp {
     res: Response,
     next: NextFunction,
   ): Promise<void | object> {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      console.log('am here');
-      const errArr = errors.array().map(({ msg }) => msg);
-      return formatResponse(errArr, res, 400, true);
-    }
-    return next();
+    await processValidationResult(req, res, next);
   }
 
   /**

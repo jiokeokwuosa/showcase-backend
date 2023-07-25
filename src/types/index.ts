@@ -1,4 +1,4 @@
-import { User } from "@prisma/client";
+import { User } from '@prisma/client';
 
 export interface IErrorResponse {
   status: number;
@@ -9,7 +9,7 @@ export interface IUser {
   email: string;
   password: string;
   firstName: string;
-  lastName: string
+  lastName: string;
 }
 
 export interface IRegisterResponse {
@@ -20,5 +20,10 @@ export interface IRegisterResponse {
 export interface IAPIResponse {
   statusCode: number;
   data?: unknown;
-  error?: unknown,
+  error?: unknown;
+}
+
+export interface IUserLoginData {
+  email: string;
+  password: string;
 }
